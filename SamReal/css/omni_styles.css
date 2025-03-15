@@ -1,0 +1,22 @@
+@charset "UTF-8"; 
+
+.band-txt {
+ 	color: white;
+ 	background-color:black;
+ 	margin:0.25vh;
+ 	vertical-align: baseline; /* for small text  when centered */
+ 	
+}
+
+
+ .band-name h1 {
+ 	padding:0px 0px 0px 0px;
+ 	margin:0px;
+ 	display:flex;
+ 	flex-direction:column;
+ 	gap:0vh;
+ }
+ 
+ h1 span {
+    align-self: flex-start; /* Prevents full-width stretching */
+}
