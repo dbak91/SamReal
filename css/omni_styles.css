@@ -1,0 +1,111 @@
+@charset "UTF-8"; 
+:root {
+    --body-margin: 1vh;
+    --menu-font-size : 1.5vh;
+    --menu-padding : 15px;
+    --body-margin-full: 1vh;
+    --main-radius: 10px;
+    --main-padding : 8px;
+    --main-margin : calc(2*var(--body-margin));
+    --carrib : #037171;
+    --brown : #B09398;
+    --rose : #653239;
+    --celadon : #A4D4B4;
+    --blue: #D6EEFF;
+}
+/* ------------------------------------- */
+/* --------- Header(band name) --------- */
+/* ----------------------*/
+header {
+	padding-top:calc( var(--menu-padding));
+}
+
+.band-txt {
+ 	color: white;
+ 	background-color:black;
+ 	 /* for needed gap between band name spans, but may be adding double margin between band name and extra, bad production*/ 
+ 	vertical-align: baseline; /* for <small> text  when centered aligned, be on bottom line*/
+ 	padding: 8px;;
+ 	border-radius:10px;
+ 	margin:2px;
+}
+
+/* Use flex, easier. All the requirement is is vertical stacking */
+/* of the band name parts without using breaks (no gap and odd corners not abiding by radius otherwise) */
+/* but basic display and block was unclear on how to stop background stretching */ 
+ .band-name h1 {
+ 	display:flex;
+ 	flex-direction:column;
+ }
+ 
+ h1 span {
+    align-self: flex-start; /* Prevents full-width stretching i.e background fit to text */
+}
+
+h1{
+ 	font-size: clamp(48px, 8vw, 80px); /*min, def,max*/ 	
+}
+
+.bg-placeholder {
+	background-image: url('../img/main-banner.jpg');
+    
+    background-position: 78% 25%; /* Adjusts cropping area */
+    background-size: cover;
+    position: fixed;
+	z-index: -1;
+	
+	display:block;
+	
+	 
+	 /*needed to maintin crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
+	 width:calc(100% );
+
+ 	min-height: 120vh;
+	 
+	top:1%;
+}
+
+body{
+	margin : var(--body-margin-full);
+}
+
+.menuBar{
+	opacity: 0.9;
+	/* Wireframe is to have band name (first div/<a>) on the left, then all site links to the right [r1] 
+  	this is achieved by only having 2 sub elements in the nav, with band as <a> and links grouped under a <div> for only 2 elements.
+  	all link sub elements will stack from the rhs (text will be centred vertically [r2])
+  */
+	background-color : black;
+	padding : var(--menu-padding);
+	
+	align-items : center; /*[r2]*/
+
+	/*--- [r1]---*/
+	display : flex;
+	justify-content: space-between;
+  	position: fixed;
+  	/*------------*/
+  	font-size:var(--menu-font-size);
+  	
+  		width:calc(99vw - (2*var(--body-margin)) - (var(--main-padding)) );
+  	 /* body has a margin of x% adjust dynamically*/
+  	
+  	border-radius: var(--main-radius);
+ 	
+ 	
+ 	top:1%;
+ }
+
+ .menuBar a{
+ 	text-decoration: none;
+ 	color: grey; /* all links to grey, band will override to its own color even though its an a */
+ 	font-size:var(--menu-font-size);
+}
+
+.menuBar a:hover {
+    color: #FFD700;
+}
+.menuBar .site-links  {
+ 	display: flex; 
+ 	gap : 15px;
+ }
