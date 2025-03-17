@@ -1,17 +1,21 @@
 @charset "UTF-8"; 
 :root {
-    --body-margin: 1vh;
+    --body-margin: 5px;
     --menu-font-size : 1.5vh;
     --menu-padding : 15px;
     --body-margin-full: 1vh;
     --main-radius: 10px;
-    --main-padding : 8px;
+    --main-padding : 5px;
     --main-margin : calc(2*var(--body-margin));
     --carrib : #037171;
     --brown : #B09398;
     --rose : #653239;
     --celadon : #A4D4B4;
     --blue: #D6EEFF;
+}
+
+* {
+	box-sizing: border-box;
 }
 /* ------------------------------------- */
 /* --------- Header(band name) --------- */
@@ -47,6 +51,10 @@ h1{
 }
 
 .bg-placeholder {
+	
+	 max-width:calc(100%-var(--main-padding) - 2*var(--body-margin)); 
+	 /*needed to maintin crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
+	 width:calc(100% - 2*var(--body-margin) - (var(--main-padding)));
 	background-image: url('../img/main-banner.jpg');
     
     background-position: 78% 25%; /* Adjusts cropping area */
@@ -56,10 +64,9 @@ h1{
 	
 	display:block;
 	
-	 
 	 /*needed to maintin crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
-	 width:calc(100% );
-
+	
+	border-radius: var(--main-radius);
  	min-height: 120vh;
 	 
 	top:1%;
@@ -87,7 +94,7 @@ body{
   	/*------------*/
   	font-size:var(--menu-font-size);
   	
-  		width:calc(99vw - (2*var(--body-margin)) - (var(--main-padding)) );
+     width:calc(100% - (2*var(--body-margin)) - (var(--main-padding)) );
   	 /* body has a margin of x% adjust dynamically*/
   	
   	border-radius: var(--main-radius);
