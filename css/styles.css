@@ -81,12 +81,26 @@ body {
  	display: flex; 
  	gap : 15px;
  }
- 
+
+.MenuList  {
+  color: grey;
+  display: flex;
+  gap: 15px; 
+  flex-wrap: nowrap; 
+    align-items: center;
+}
+
+#MenuTopBar .MenuList a {
+  white-space: nowrap; 
+  display: inline-block;
+}
+
 #extraMenuBar .MenuList {
 	color : grey;
 	display: flex;
-  	gap: 15px; /* Spacing between menu items */
-  	
+  	gap: 15px;
+  	flex-wrap: nowrap;
+  	  align-items: center;
 }
 
 #extraMenuBar{
