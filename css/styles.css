@@ -60,7 +60,7 @@ body {
   	font-size:var(--menu-font-size);
   	
   	
-  	width:calc(101% - (2*var(--body-margin)) - (var(--main-padding)) ); /* body has a margin of x% adjust dynamically*/
+  	width:calc(101% - (2*var(--body-margin)) - (var(--main-padding)) ); 
   	
   	border-radius: var(--main-radius);
  	
@@ -70,7 +70,7 @@ body {
 
  .menuBar a{
  	text-decoration: none;
- 	color: grey; /* all links to grey, band will override to its own color even though its an a */
+ 	color: white; /* all links to grey, band will override to its own color even though its an a */
  	font-size:var(--menu-font-size);
 }
 
