@@ -161,7 +161,7 @@ body {
  
  
 
- main.sam,main.about, main.signup{
+ main.sam,main.about, main.signup {
  
  		max-width:100%; /* reset, defaults for main set to 65%*/
  		 width:calc(100% - 2*var(--body-margin) - (var(--main-padding)));
