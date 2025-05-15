@@ -19,6 +19,10 @@
 	box-sizing: border-box;
 }
 
+header {
+	max-width: 80vw;
+	width:60vw;
+}
 .img-box{
 	position:relative;
 	text-align:center;

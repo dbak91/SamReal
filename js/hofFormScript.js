@@ -1,5 +1,7 @@
 /**
  * could be updated to use async function but not enough time to learn. using basic fetch
+ * 
+ * some repitition, same boieler plate for intiial load and action listener, could be function
  */
 
 document.addEventListener("DOMContentLoaded", function() 
@@ -28,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function()
 						
 							const imgUrl= data.data[0].image.source;
 							
-							displayOutput.textContent = "Year: " + data.year +  " Band: " +data.data[0].band.name;//+ JSON.stringify(data, null, 2); //dev testing line, to see output
+							displayOutput.textContent = "Year: " + data.year +  "| Band: " +data.data[0].band.name;//+ JSON.stringify(data, null, 2); //dev testing line, to see output
 			               	displayOutput.style.color = "white";
 							
 							imgOutput.src = imgUrl;
@@ -40,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function()
 			           });
 	
 	/**
-	 * ADD SUBMIT AACTION LISTENER
+	 * ADD SUBMIT ACTION LISTENER
 	* checkname not empty
 	* check email valid
-	* send reques to mudfoot
+	* send request to mudfoot
 	* handle oputput
 	* 
 	*/
@@ -89,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function()
 						const imgUrl= data.data[0].image.source;
 						//const br = document.createElement("br");
 						
-						displayOutput.innerHTML= "Year: " + data.year + " Band: " +data.data[0].band.name;//+ JSON.stringify(data, null, 2); //dev testing line, to see output
+						displayOutput.innerHTML= "Year: " + data.year + "| Band: " +data.data[0].band.name;//+ JSON.stringify(data, null, 2); //dev testing line, to see output
 		               	displayOutput.style.color = "white";
 						
 						imgOutput.src = imgUrl;
@@ -98,9 +100,10 @@ document.addEventListener("DOMContentLoaded", function()
 		           .catch(error => {
 		               displayOutput.textContent = "Error: " + error.message;
 		               displayOutput.style.color = "red";
-		           });
+		           
+				   });/** fetch */
 
-   	});/* submit action list */
+   	});/* submit action listener */
 
    
 });/* on load */
