@@ -151,9 +151,6 @@ body {
 .home-header-band h1 span {
     align-self: flex-start; /* Prevents full-width stretching */
 }
- main.sam{
- 	max-width :100%;
- }
  
  .long-sam-description{
  	max-width:65%;
@@ -166,9 +163,9 @@ body {
  
  
 
- main.sam{
+ main.sam,main.about, main.signup{
  
- 		max-width:120%;
+ 		max-width:100%; /* reset, defaults for mian to 65%*/
  		 width:calc(100% - 2*var(--body-margin) - (var(--main-padding)));
 }
  main h1{
@@ -349,7 +346,41 @@ body {
 	
 	border-radius: var(--main-radius);
 }
- 
+.formGrid {
+    display: grid;
+    gap: 1rem;
+    max-width: 100%; /* Prevent horizontal overflow */
+}
+
+.formGrid div {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr);
+}
+
+.emailRow {
+    grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr) auto;
+}
+
+input, button.submitBtn {
+	min-width:90%;
+	max-width:30%;
+}
+
+label{
+	max-width:40vw;
+}
+@media (max-width: 600px) {
+    .formGrid div {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        flex-wrap: no-wrap;
+    }
+    
+    .emailRow button {
+        justify-self: start; 
+    }
+}
  @media (min-width: 1024px) {
   .sam-description,.product-box{
     max-width:65%; /* Adjust font size for larger screens */
