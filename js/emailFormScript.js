@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function()
 				
 		        
 		        errorOutput.style.color = "red";
-		        errorOutput.textContent = result.error || "An error occurred"; /* could be null */
+		        errorOutput.textContent = result.error || "An error was returned"; /* could be null */
 		      }
 		    })
 		    .catch(error => {
