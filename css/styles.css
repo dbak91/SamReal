@@ -1,3 +1,5 @@
+/* monolithic style sheet. some redundancy because it was it was developed as-learning rather than ground-up*/
+
 @charset "UTF-8";
 :root {
     --body-margin: 5px;
@@ -40,9 +42,7 @@ body {
 	  
 	
 }
-.para3{
-	
-}
+
 .menuBar{
 	opacity: 0.9;
 	/* Wireframe is to have band name (first div/<a>) on the left, then all site links to the right [r1] 
@@ -54,12 +54,10 @@ body {
 	
 	align-items : center; 
 
-	/*--- [r1]---*/
 	display : flex;
 	justify-content: space-between;
   	position: sticky;
   	top:0;
-  	/*------------*/
   	
   	font-size:var(--menu-font-size);
   	
@@ -73,11 +71,11 @@ body {
  }
  
  #extraMenuBar{
-		width:calc(101% - (2*var(--body-margin)) - (var(--main-padding)) ); /* body has a margin of x% adjust dynamically*
+		width:calc(101% - (2*var(--body-margin)) - (var(--main-padding)) ); /* body has a margin of x% adjust dynamically*/
 			padding : var(--menu-padding);
     background-color: black; 
     color: white;             
-    display: flex;            /* Flexbox for centering */
+    display: flex;         
     justify-content: space-between;
     align-items: center;      
     font-size: 20px;          
@@ -149,7 +147,7 @@ body {
  }
  
 .home-header-band h1 span {
-    align-self: flex-start; /* Prevents full-width stretching */
+    align-self: flex-start;
 }
  
  .long-sam-description{
@@ -165,7 +163,7 @@ body {
 
  main.sam,main.about, main.signup{
  
- 		max-width:100%; /* reset, defaults for mian to 65%*/
+ 		max-width:100%; /* reset, defaults for main set to 65%*/
  		 width:calc(100% - 2*var(--body-margin) - (var(--main-padding)));
 }
  main h1{
@@ -281,7 +279,7 @@ body {
  .product-box{
  	display:flex;
  	flex-wrap:wrap; /* stack by row, product will take 1/3 w*/
- 	max-width:100%; /* of cotnainer which will be resticted to tygake global margins */
+ 	max-width:100%; /* of container which will be restricted to take global margins */
  	width:100%;
  	justify-content:center;
  	text-align:center;
@@ -290,7 +288,7 @@ body {
  
  .product{
  
-  flex: 1 1 calc(33.33% - 40px); /* allow growq(1) allow shrink(1) and width aprox 33% -40px for margin. */ 
+  flex: 1 1 calc(33.33% - 40px); /* allow grow(1) allow shrink(1) and width approx 33% -40px for margin. */ 
   display:flex;
  	max-width:28%;
  	margin:2vw;
@@ -326,7 +324,7 @@ body {
  }
  .bg-placeholder {
 	 max-width:calc(100%-var(--main-padding) - 2*var(--body-margin)); 
-	 /*needed to maintin crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
+	 /*needed to maintain crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
 	 width:calc(100% - 2*var(--body-margin) - (var(--main-padding)));
 	display:block;
     
@@ -335,7 +333,7 @@ body {
    
   	background-image: url('../img/main-banner.jpg');
     
-    background-position: 78% 25%; /* Adjusts cropping area */
+    background-position: 78% 25%; 
     /* IF PAGE GOES BEYOND SIZE OF IMAGE REPEAT IT */
     background-size: cover;
     position: fixed;
@@ -383,12 +381,22 @@ label{
 }
  @media (min-width: 1024px) {
   .sam-description,.product-box{
-    max-width:65%; /* Adjust font size for larger screens */
+    max-width:65%; 
   }
   
   .product{
-  	max-width:25%; /*on desktop need to reduce max width else 28% of 65% restriction above causes 2x3 table instead of 3x2*/ 
+  	max-width:25%; /*on desktop need to reduce max width else 28% of 65% restriction above causes 2x3 table instead of 3x2 */ 
   
+  }
+  
+  .formGrid input, button.submitBtn {
+    max-width: 30vw !important;
+    min-width: auto;
+    width: 25vw;
+  }
+  
+  .para1{
+    max-width: 40vw !important;
   }
 }
  

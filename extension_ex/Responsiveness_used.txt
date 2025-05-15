@@ -1,0 +1,10 @@
+Responsiveness:
+- combination of 'vh/vw', '% of parent', and hard coded 'px' values to cater for cases where elements stretch to fill but need restricting to certain sizes on portrait/landscape screens
+
+- media queries to handle max/min widths of 600 and 1024 setting different flex/widths or display types 
+
+- pictures are scaled or displayed depending on screen sizes
+
+e.g. Sign up page input Form is set to a hard lit of screen, media query sets each row to be wrapped if screen below 600 width so label and input can stack,
+
+e.g. Sam services text is 90% of screen when portrait, limited to 65% on landscape so that the text is still blocky rather than an 'acute' rectangle
