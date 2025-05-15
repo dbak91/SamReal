@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function()
 						
 						
 							const imgUrl= data.data[0].image.source;
-							const br = document.createElement("br");
-							displayOutput.innerHTML = "Year: " + data.year +  " Band: " +data.data[0].band.name;//+ JSON.stringify(data, null, 2); //dev testing line, to see output
+							
+							displayOutput.textContent = "Year: " + data.year +  " Band: " +data.data[0].band.name;//+ JSON.stringify(data, null, 2); //dev testing line, to see output
 			               	displayOutput.style.color = "white";
 							
 							imgOutput.src = imgUrl;

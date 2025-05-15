@@ -360,7 +360,7 @@ body {
     grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr) auto;
 }
 
-input, button.submitBtn {
+input, button.submitBtn, select {
 	min-width:90%;
 	max-width:30%;
 }
@@ -389,7 +389,7 @@ label{
   
   }
   
-  .formGrid input, button.submitBtn {
+  .formGrid input, button.submitBtn, select {
     max-width: 30vw !important;
     min-width: auto;
     width: 25vw;
