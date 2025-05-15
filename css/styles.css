@@ -22,12 +22,16 @@
 	text-align:center;
 	color:grey;
 }
+.label {
+  color: white;
+  background-color:black;
+}
 
 .center-bottom{
 	position:absolute;
 	bottom:8px;
 	text-align:center;
-	font-size:1.5vh;
+	font-size:12px;
 }
 
 body {
@@ -67,6 +71,19 @@ body {
  	
  	
  }
+ 
+ #extraMenuBar{
+		width:calc(101% - (2*var(--body-margin)) - (var(--main-padding)) ); /* body has a margin of x% adjust dynamically*
+			padding : var(--menu-padding);
+    background-color: black; 
+    color: white;             
+    display: flex;            /* Flexbox for centering */
+    justify-content: space-between;
+    align-items: center;      
+    font-size: 20px;          
+	position:sticky;
+	 top:59px;
+}
 
  .menuBar a{
  	text-decoration: none;
@@ -101,19 +118,10 @@ body {
   	gap: 15px;
   	flex-wrap: nowrap;
   	  align-items: center;
+  	 
 }
 
-#extraMenuBar{
-		width:calc(101% - (2*var(--body-margin)) - (var(--main-padding)) ); /* body has a margin of x% adjust dynamically*
-			padding : var(--menu-padding);
-    background-color: black; 
-    color: white;             
-    display: flex;            /* Flexbox for centering */
-    justify-content: space-between;
-    align-items: center;      
-    font-size: 20px;          
-	position:sticky;
-}
+
   
  #moreLink:hover + .menuBar {
     display: block;

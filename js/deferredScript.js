@@ -10,14 +10,14 @@
 		
 			
 			const script1 = document.createElement('script');
-			script1.src = `js/functionJ.js?v=${new Date().getTime()}`;
+			script1.src = `js/insertMenuFunction.js?v=${new Date().getTime()}`; //generrate unique timestamp name as v stop caching so sharted widths readjust
 			document.body.appendChild(script1);
 			});
 
 	}
 	
 	window.addEventListener('load', 
-		    applyAdjustments  // Re-run the JavaScript adjustments when the page loads
+		    applyAdjustments  
 		);
 		
 	applyAdjustments();
