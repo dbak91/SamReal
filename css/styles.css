@@ -139,7 +139,7 @@ body {
 main {
   padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 10px) 0px 0px
     0px;
-  min-height: 2000px !important;
+  min-height: 3000px !important; /* allows for proper scroll-to buttons on portrait. 
   max-width: 65%;
 }
 
