@@ -419,6 +419,6 @@ label {
 }
 @media (min-width: 600px) {
   header {
-    max-width: 33vw; /* new width for larger width */
+    max-width: 40vw; /* new width for larger width */
   }
 }
