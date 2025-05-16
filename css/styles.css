@@ -53,7 +53,7 @@ body {
   */
   background-color: black;
   padding: var(--menu-padding);
-
+z-index:10;
   align-items: center;
 
   display: flex;
@@ -122,9 +122,6 @@ body {
   display: block;
 }
 
-#band-home-logo {
-  color: white;
-}
 .home-header-band {
   padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 5vh) 0px 0px 0px;
 }
@@ -147,9 +144,6 @@ main {
   align-self: flex-start;
 }
 
-.long-sam-description {
-  max-width: 65%;
-}
 
 .sam-description {
   padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 70px) 0px 0px
@@ -361,10 +355,14 @@ button.submitBtn,
 select {
   min-width: 90%;
   max-width: 30%;
+  border-radius: calc(var(--main-radius) - 4px);
+
 }
 
 label {
+	  padding:2px;
   max-width: 40vw;
+  border-radius: calc(var(--main-radius) - 4px);
 }
 @media (max-width: 600px) {
   .formGrid div {
