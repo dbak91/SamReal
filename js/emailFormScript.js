@@ -2,14 +2,16 @@
  * https://salesforce.stackexchange.com/questions/230009/regex-for-email-validation
  *  ^[^@]+@[^@]+\.[^@]+$
  * 
- * email validation
+ * email validation regex
  * 
  * 
  */
 
 document.addEventListener("DOMContentLoaded", function() 
 {
- 	const form = document.querySelector(".formGrid");
+	/**
+	 * get html elements
+	 */
   	const nameInput = document.getElementById("username");
   	const emailInput = document.getElementById("email");
 	const submitBtn = document.querySelector(".submitBtn");
@@ -65,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function()
 		      if (result.message) {
 		        
 		        errorOutput.style.color = "white";
-		        errorOutput.textContent = "Success, signed up. Server Message(may be empty):" +  (result.messsage ||  "");
+		        errorOutput.textContent = "Success, signed up.  || Server Message(may be empty):" +  (result.messsage ||  "");
 		        
 		        // reset
 		        nameInput.value = "";
@@ -74,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function()
 				
 		        
 		        errorOutput.style.color = "red";
-		        errorOutput.textContent = result.error || "An error was returned"; /* could be null */
+		        errorOutput.textContent = result.error || "An unkown error was returned(result.error null)"; /* could be null */
 		      }
 		    })
 		    .catch(error => {
