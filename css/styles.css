@@ -27,8 +27,7 @@
 }
 
 header {
-  max-width: 40vw;
-  width: 60vw;
+  width: 80vw;
 }
 .img-box {
   position: relative;
@@ -383,6 +382,7 @@ label {
     justify-self: start;
   }
 }
+
 @media (min-width: 1100px) {
   .about,
   .sam-description,
@@ -409,5 +409,16 @@ label {
   .scheme4,
   .scheme5 {
     max-width: 40vw !important;
+  }
+}
+ /* scale header down sensibly*/
+@media (min-width: 321px) {
+  header {
+    max-width: 62vw; /* new width for larger width */
+  }
+}
+@media (min-width: 600px) {
+  header {
+    max-width: 33vw; /* new width for larger width */
   }
 }
