@@ -195,37 +195,37 @@ small {
 /*-------------------------------*/
 /*-- common margins and pdding --*/
 /*-------------------------------*/
-.para1,
+.scheme1,
 .band-txt,
-.para2,
-.para3,
-.para4,
-.para5 {
+.scheme2,
+.scheme3,
+.scheme4,
+.scheme5 {
   border-radius: var(--main-radius);
   padding: calc(var(--main-padding) + 10px);
   margin: var(--main-margin);
 }
 
-.para1 {
+.scheme1 {
   background-color: #037171;
   color: white;
   opacity: 85%;
 }
-.para2 {
+.scheme2 {
   background-color: var(--carrib);
   color: white;
 }
-.para3 {
+.scheme3 {
   background-color: var(--brown);
   color: black;
 }
 
-.para4 {
+.scheme4 {
   background-color: var(--rose);
   color: white;
 }
 
-.para5 {
+.scheme5 {
   background-color: var(--celadon);
   color: black;
 }
@@ -367,7 +367,8 @@ select {
 }
 
 label {
-	  padding:2px;
+	  padding:5px 2px 5px 2px;
+	  margin:5px;
   max-width: 40vw;
   border-radius: calc(var(--main-radius) - 4px);
 }
@@ -402,11 +403,11 @@ label {
   }
 
   /* exclude a type in future keep full width on all sizes*/
-  .para1,
-  .para2,
-  .para3,
-  .para4,
-  .para5 {
+  .scheme1,
+  .scheme2,
+  .scheme3,
+  .scheme4,
+  .scheme5 {
     max-width: 40vw !important;
   }
 }
