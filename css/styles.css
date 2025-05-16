@@ -367,7 +367,7 @@ select {
 
 label {
 	  padding:5px 2px 5px 2px;
-	  margin:5px;
+	 
   max-width: 40vw;
   border-radius: calc(var(--main-radius) - 4px);
 }
@@ -401,7 +401,7 @@ label {
     min-width: auto;
     width: 25vw;
   }
-
+  
   /* exclude a type in future keep full width on all sizes*/
   .scheme1,
   .scheme2,
