@@ -1,0 +1,10 @@
+Responsiveness methods:
+-----------------------
+- Combination of 'vh/vw', '% of parent', and hard coded 'px' values to cater for cases where elements stretch to fill but need restricting to certain sizes on portrait/landscape screens
+- Media queries to handle max/min widths of 600 and 1024 setting different flex/widths or display types 
+- Image are scaled or displayed depending on screen sizes
+
+Examples:
+---------
+- Sam text is 90% of screen when portrait, limited to 65% on landscape so that the text is still blocky rather than an 'acute' rectangle when stretched
+- Email form and label stack vertically when narrow, alignment consistent

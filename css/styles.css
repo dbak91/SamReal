@@ -146,7 +146,7 @@ body {
  }
  main {
  	padding:calc(var(--menu-font-size) + (var(--menu-padding)) + 10px ) 0px 0px 0px;
- 	
+ 	min-height:2000px;
  	max-width:65%;
  }
  
@@ -390,11 +390,11 @@ label{
         justify-self: start; 
     }
 }
- @media (min-width: 1024px) {
-  .sam-description,.product-box{
-    max-width:65%; 
+ @media (min-width: 1100px) {
+  .about,.sam-description,.product-box{
+    max-width:65% !important;
   }
-  
+
   .product{
   	max-width:25%; /*on desktop need to reduce max width else 28% of 65% restriction above causes 2x3 table instead of 3x2 */ 
   
@@ -406,7 +406,8 @@ label{
     width: 25vw;
   }
   
-  .para1{
+  /* exclude a type in future keep full width on all sizes*/
+  .para1,.para2,.para3,.para4,.para5{
     max-width: 40vw !important;
   }
 }
