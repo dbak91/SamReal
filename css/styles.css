@@ -246,7 +246,7 @@ body {
  	padding : calc(var(--main-padding));
  	
  	margin:0.25vh;
- 	
+ 	 white-space:nowrap;
   	 vertical-align: baseline;
  }
  
