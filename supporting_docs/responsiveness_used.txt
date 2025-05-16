@@ -1,8 +1,10 @@
+Developed with F12 Edge/chrome Dev options enabled and had it set to responsive and adjusted and tested. 
+
 Responsiveness methods:
 -----------------------
 - Combination of 'vh/vw', '% of parent', and hard coded 'px' values to cater for cases where elements stretch to fill but need restricting to certain sizes on portrait/landscape screens
 - Media queries to handle max/min widths of 600 and 1024 setting different flex/widths or display types 
-- Image are scaled or displayed depending on screen sizes
+- Images are scaled or displayed depending on screen sizes
 
 Examples:
 ---------

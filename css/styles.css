@@ -2,413 +2,406 @@
 
 @charset "UTF-8";
 :root {
-    --body-margin: 5px;
-    --menu-font-size : 1.5vh;
-    --menu-padding : 15px;
-    --body-margin-full: 5px 5px 5px 5px;
-    --main-radius: 10px;
-    --main-padding : 8px;
-    --main-margin : calc(2*var(--body-margin));
-    --carrib : #037171;
-    --brown : #B09398;
-    --rose : #653239;
-    --celadon : #A4D4B4;
-    --blue: #D6EEFF;
+  --body-margin: 5px;
+  --menu-font-size: 1.5vh;
+  --menu-padding: 15px;
+  --body-margin-full: 5px 5px 5px 5px;
+  --main-radius: 10px;
+  --main-padding: 8px;
+  --main-margin: calc(2 * var(--body-margin));
+  --carrib: #037171;
+  --brown: #b09398;
+  --rose: #653239;
+  --celadon: #a4d4b4;
+  --blue: #d6eeff;
 }
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header {
-	max-width: 80vw;
-	width:60vw;
+  max-width: 80vw;
+  width: 60vw;
 }
-.img-box{
-	position:relative;
-	text-align:center;
-	color:grey;
+.img-box {
+  position: relative;
+  text-align: center;
+  color: grey;
 }
 .label {
   color: white;
-  background-color:black;
+  background-color: black;
 }
 
-.center-bottom{
-	position:absolute;
-	bottom:8px;
-	text-align:center;
-	font-size:12px;
+.center-bottom {
+  position: absolute;
+  bottom: 8px;
+  text-align: center;
+  font-size: 12px;
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
-	margin : var(--body-margin-full);
-	  
-	
+  font-family: "Open Sans", sans-serif;
+  margin: var(--body-margin-full);
 }
 
-.menuBar{
-	opacity: 0.9;
-	/* Wireframe is to have band name (first div/<a>) on the left, then all site links to the right [r1] 
+.menuBar {
+  opacity: 0.9;
+  /* Wireframe is to have band name (first div/<a>) on the left, then all site links to the right [r1] 
   	this is achieved by only having 2 sub elements in the nav, with band as <a> and links grouped under a <div> for only 2 elements.
   	all link sub elements will stack from the rhs (text will be centred vertically [r2])
   */
-	background-color : black;
-	padding : var(--menu-padding);
-	
-	align-items : center; 
+  background-color: black;
+  padding: var(--menu-padding);
 
-	display : flex;
-	justify-content: space-between;
-  	position: sticky;
-  	top:0;
-  	
-  	font-size:var(--menu-font-size);
-  	
-  	
-  	width:calc(101% - (2*var(--body-margin)) - (var(--main-padding)) ); 
-  	
-  	border-radius: var(--main-radius);
- 	
- 	
- 	
- }
- 
- #extraMenuBar{
-		width:calc(101% - (2*var(--body-margin)) - (var(--main-padding)) ); /* body has a margin of x% adjust dynamically*/
-			padding : var(--menu-padding);
-    background-color: black; 
-    color: white;             
-    display: flex;         
-    justify-content: space-between;
-    align-items: center;      
-    font-size: 20px;          
-	position:sticky;
-	 top:59px;
+  align-items: center;
+
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+
+  font-size: var(--menu-font-size);
+
+  width: calc(101% - (2 * var(--body-margin)) - (var(--main-padding)));
+
+  border-radius: var(--main-radius);
 }
 
- .menuBar a{
- 	text-decoration: none;
- 	color: white; /* all links to grey, band will override to its own color even though its an a */
- 	font-size:var(--menu-font-size);
+#extraMenuBar {
+  width: calc(
+    101% - (2 * var(--body-margin)) - (var(--main-padding))
+  ); /* body has a margin of x% adjust dynamically*/
+  padding: var(--menu-padding);
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  position: sticky;
+  top: 59px;
+}
+
+.menuBar a {
+  text-decoration: none;
+  color: white; /* all links to grey, band will override to its own color even though its an a */
+  font-size: var(--menu-font-size);
 }
 
 .menuBar a:hover {
-    color: #FFD700;
+  color: #ffd700;
 }
-.menuBar .site-links  {
- 	display: flex; 
- 	gap : 15px;
- }
+.menuBar .site-links {
+  display: flex;
+  gap: 15px;
+}
 
-.MenuList  {
+.MenuList {
   color: grey;
   display: flex;
-  gap: 15px; 
-  flex-wrap: nowrap; 
-    align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 #MenuTopBar .MenuList a {
-  white-space: nowrap; 
+  white-space: nowrap;
   display: inline-block;
 }
 
 #extraMenuBar .MenuList {
-	color : grey;
-	display: flex;
-  	gap: 15px;
-  	flex-wrap: nowrap;
-  	  align-items: center;
-  	 
-}
-
-
-  
- #moreLink:hover + .menuBar {
-    display: block;
-}
- 
- #band-home-logo {
- 	color: white;
- }
- .home-header-band{
- 	padding:calc(var(--menu-font-size) + (var(--menu-padding)) + 5vh ) 0px 0px 0px;
- 	
- }
- 
- .home-header-band h1 {
- 	padding:0px 0px 0px 0px;
- 	margin:0px;
- 	display:flex;
- 	flex-direction:column;
- 	gap:0vh;
- }
- main {
- 	padding:calc(var(--menu-font-size) + (var(--menu-padding)) + 10px ) 0px 0px 0px;
- 	min-height:2000px;
- 	max-width:65%;
- }
- 
-.home-header-band h1 span {
-    align-self: flex-start;
-}
- 
- .long-sam-description{
- 	max-width:65%;
- }
- 
- .sam-description{
- padding:calc(var(--menu-font-size) + (var(--menu-padding)) + 70px ) 0px 0px 0px;
- 	text-align:center;
- }
- 
- 
-
- main.sam,main.about, main.signup {
- 
- 		max-width:100%; /* reset, defaults for main set to 65%*/
- 		 width:calc(100% - 2*var(--body-margin) - (var(--main-padding)));
-}
- main h1{
- 	font-size:20vh;
- 	
- 	
- }
- .head-box{
- 	display:flex;
- 	flex-direction:row;
- 	 width: 100%;
- 	 gap : 5px;
- 	 align-items: center;
- 	 justify-content:flext-start;
- 	 
- }
- 
- .left {
- flex:1;
- 
- 
- }
- small {
-    vertical-align: baseline;
-}
- .left h3{
- 	display:flex;
- felx-direction:column;
- 
- justify-content:center;
- align-items: baseline;
- 
- }
- .right{
- 	
-	 flex:1;
- 
- 	}
- /*-------------------------------*/
- /*-- common margins and pdding --*/
- /*-------------------------------*/
- .para1,.band-txt,.para2,.para3,.para4,.para5 {
- 	border-radius: var(--main-radius);
- 	padding : calc(var(--main-padding) + 10px);
- 	margin: var(--main-margin);
- }
- 
- .para1 {
- 	background-color:#037171;
- 	color:white;
- 	opacity:85%;
- 	
- }
- .para2{
- 		background-color:var(--carrib);
- 		color:white;
- }
- .para3{
- background-color:var(--brown);
- 		color:black;
- }
- 
- .para4{
- background-color:var(--rose);
- 		color:white;
- }
- 
-  .para5{
- background-color:var(--celadon);
- 		color:black;
- }
- .band-txt {
- 	color: white;
- 	font-size: 6vh;
- 	background-color:black;
- 	padding : calc(var(--main-padding));
- 	
- 	margin:0.25vh;
- 	 white-space:nowrap;
-  	 vertical-align: baseline;
- }
- 
- .band-txt.sam,.band-txt.tag{
- 	 font-size: 2.5vh; 
- }
- .band-txt.tag{
- 	font-size:2vh;
- }
- 
- 
- .band-description{
- 	margin :var(--main-margin);
- 	
- }
- 
-  .sam-big-name {
-  padding : var(--main-padding);
-  margin: var(--main-margin);
- 	color: white;
- 	font-size:5vh;
- 	background-color:black;
- 	padding : calc(var(--main-padding));
- 	
- 	max-width:100%;
- 	display: flex;
-  justify-content: center; 
+  color: grey;
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
   align-items: center;
-  background-color:var(--carrib);
- 		color:white;
-  	border-radius : var(--main-radius);
- }
- 
- .product-box{
- 	display:flex;
- 	flex-wrap:wrap; /* stack by row, product will take 1/3 w*/
- 	max-width:100%; /* of container which will be restricted to take global margins */
- 	width:100%;
- 	justify-content:center;
- 	text-align:center;
- 	
- }
- 
- a.product {
- text-decoration: none; color: inherit;}
- .product{
- 
-  flex: 1 1 calc(33.33% - 40px); /* allow grow(1) allow shrink(1) and width approx 33% -40px for margin. */ 
-  display:flex;
- 	max-width:28%;
- 	margin:2vw;
- 	padding:3%;
- 	font-size:2vh;
- 	align-items:center;
- 	justify-content:center;
- 	background-color:white;
- 	text-align:center;
- 	border-radius:15px;
- }
- 
- /* copmpensate for injected menu bar on scroll*/
- [id] {
+}
+
+#moreLink:hover + .menuBar {
+  display: block;
+}
+
+#band-home-logo {
+  color: white;
+}
+.home-header-band {
+  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 5vh) 0px 0px 0px;
+}
+
+.home-header-band h1 {
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0vh;
+}
+main {
+  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 10px) 0px 0px
+    0px;
+  min-height: 2000px;
+  max-width: 65%;
+}
+
+.home-header-band h1 span {
+  align-self: flex-start;
+}
+
+.long-sam-description {
+  max-width: 65%;
+}
+
+.sam-description {
+  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 70px) 0px 0px
+    0px;
+  text-align: center;
+}
+
+main.sam,
+main.about,
+main.signup {
+  max-width: 100%; /* reset, defaults for main set to 65%*/
+  width: calc(100% - 2 * var(--body-margin) - (var(--main-padding)));
+}
+main h1 {
+  font-size: 20vh;
+}
+.head-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 5px;
+  align-items: center;
+  justify-content: flext-start;
+}
+
+.left {
+  flex: 1;
+}
+small {
+  vertical-align: baseline;
+}
+.left h3 {
+  display: flex;
+  felx-direction: column;
+
+  justify-content: center;
+  align-items: baseline;
+}
+.right {
+  flex: 1;
+}
+/*-------------------------------*/
+/*-- common margins and pdding --*/
+/*-------------------------------*/
+.para1,
+.band-txt,
+.para2,
+.para3,
+.para4,
+.para5 {
+  border-radius: var(--main-radius);
+  padding: calc(var(--main-padding) + 10px);
+  margin: var(--main-margin);
+}
+
+.para1 {
+  background-color: #037171;
+  color: white;
+  opacity: 85%;
+}
+.para2 {
+  background-color: var(--carrib);
+  color: white;
+}
+.para3 {
+  background-color: var(--brown);
+  color: black;
+}
+
+.para4 {
+  background-color: var(--rose);
+  color: white;
+}
+
+.para5 {
+  background-color: var(--celadon);
+  color: black;
+}
+.band-txt {
+  color: white;
+  font-size: 6vh;
+  background-color: black;
+  padding: calc(var(--main-padding));
+
+  margin: 0.25vh;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.band-txt.sam,
+.band-txt.tag {
+  font-size: 2.5vh;
+}
+.band-txt.tag {
+  font-size: 2vh;
+}
+
+.band-description {
+  margin: var(--main-margin);
+}
+
+.sam-big-name {
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+  color: white;
+  font-size: 5vh;
+  background-color: black;
+  padding: calc(var(--main-padding));
+
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--carrib);
+  color: white;
+  border-radius: var(--main-radius);
+}
+
+.product-box {
+  display: flex;
+  flex-wrap: wrap; /* stack by row, product will take 1/3 w*/
+  max-width: 100%; /* of container which will be restricted to take global margins */
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+a.product {
+  text-decoration: none;
+  color: inherit;
+}
+.product {
+  flex: 1 1 calc(33.33% - 40px); /* allow grow(1) allow shrink(1) and width approx 33% -40px for margin. */
+  display: flex;
+  max-width: 28%;
+  margin: 2vw;
+  padding: 3%;
+  font-size: 2vh;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* copmpensate for injected menu bar on scroll*/
+[id] {
   scroll-margin-top: 60px;
 }
- /**/
- 
- .sam-header{
- 	padding : var(--main-padding);
- 	justify-content: center;
- 	
- }
- h3.sam-brief{
- 	padding:var(--main-padding);
- 	
- 	margin:var(--main-margin);
- 	background-color:var(--blue);
- 	color:black;
- 	border-radius : var(--main-radius);
- 	text-align:center;
- 	font-size:1.5vh;
- }
- .sam-brief.book-now{
- 	color:white;
- 	background-color:var(--rose);
- 
- }
- .bg-placeholder {
-	 max-width:calc(100%-var(--main-padding) - 2*var(--body-margin)); 
-	 /*needed to maintain crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
-	 width:calc(100% - 2*var(--body-margin) - (var(--main-padding)));
-	display:block;
-    
-    /* height: 110vh; */
-    
-   
-  	background-image: url('../img/main-banner.jpg');
-    
-    background-position: 78% 25%; 
-    /* IF PAGE GOES BEYOND SIZE OF IMAGE REPEAT IT */
-    background-size: cover;
-    position: fixed;
-	z-index: -1;
-	min-height: 120vh;
-	height:120%;
-	top:calc(var(--body-margin));
-	
-	border-radius: var(--main-radius);
+/**/
+
+.sam-header {
+  padding: var(--main-padding);
+  justify-content: center;
+}
+h3.sam-brief {
+  padding: var(--main-padding);
+
+  margin: var(--main-margin);
+  background-color: var(--blue);
+  color: black;
+  border-radius: var(--main-radius);
+  text-align: center;
+  font-size: 1.5vh;
+}
+.sam-brief.book-now {
+  color: white;
+  background-color: var(--rose);
+}
+.bg-placeholder {
+  max-width: calc(100%-var(--main-padding) - 2 * var(--body-margin));
+  /*needed to maintain crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
+  width: calc(100% - 2 * var(--body-margin) - (var(--main-padding)));
+  display: block;
+
+  /* height: 110vh; */
+
+  background-image: url("../img/main-banner.jpg");
+
+  background-position: 78% 25%;
+  /* IF PAGE GOES BEYOND SIZE OF IMAGE REPEAT IT */
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+  min-height: 120vh;
+  height: 120%;
+  top: calc(var(--body-margin));
+
+  border-radius: var(--main-radius);
 }
 .formGrid {
-    display: grid;
-    gap: 1rem;
-    max-width: 100%; /* Prevent horizontal overflow */
+  display: grid;
+  gap: 1rem;
+  max-width: 100%; /* Prevent horizontal overflow */
 }
 
 .formGrid div {
-    display: grid;
-    align-items: center;
-    grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr);
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr);
 }
 
 .emailRow {
-    grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr) auto;
+  grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr) auto;
 }
 
-input, button.submitBtn, select {
-	min-width:90%;
-	max-width:30%;
+input,
+button.submitBtn,
+select {
+  min-width: 90%;
+  max-width: 30%;
 }
 
-label{
-	max-width:40vw;
+label {
+  max-width: 40vw;
 }
 @media (max-width: 600px) {
-    .formGrid div {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-        flex-wrap: no-wrap;
-    }
-    
-    .emailRow button {
-        justify-self: start; 
-    }
-}
- @media (min-width: 1100px) {
-  .about,.sam-description,.product-box{
-    max-width:65% !important;
+  .formGrid div {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    flex-wrap: no-wrap;
   }
 
-  .product{
-  	max-width:25%; /*on desktop need to reduce max width else 28% of 65% restriction above causes 2x3 table instead of 3x2 */ 
-  
+  .emailRow button {
+    justify-self: start;
   }
-  
-  .formGrid input, button.submitBtn, select {
+}
+@media (min-width: 1100px) {
+  .about,
+  .sam-description,
+  .product-box {
+    max-width: 65% !important;
+  }
+
+  .product {
+    max-width: 25%; /*on desktop need to reduce max width else 28% of 65% restriction above causes 2x3 table instead of 3x2 */
+  }
+
+  .formGrid input,
+  button.submitBtn,
+  select {
     max-width: 30vw !important;
     min-width: auto;
     width: 25vw;
   }
-  
+
   /* exclude a type in future keep full width on all sizes*/
-  .para1,.para2,.para3,.para4,.para5{
+  .para1,
+  .para2,
+  .para3,
+  .para4,
+  .para5 {
     max-width: 40vw !important;
   }
 }
- 
