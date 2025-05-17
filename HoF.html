@@ -44,12 +44,17 @@
     	const select = document.getElementById("year");
     	
     	<!--- hof started 1985, first entry 1986 (chuck berry)-->
-    	for ( let y = 2021;y> 1985;y--){
+    	for ( let y = 2024;y> 1985;y--){
     		
     		const optionToAdd = document.createElement("option");
-    		
+    		const defaultYear = 2021;
     		optionToAdd.value = y;
-    		optionToAdd.textContent = y; <!-- needed for Form pickup and display-->
+    		optionToAdd.textContent = y; // needed for Form pickup and display
+    		
+    		
+    		if (y === defaultYear) {
+    		      optionToAdd.selected = true;
+    		    }
     		select.appendChild(optionToAdd);
     	}
     </script>
