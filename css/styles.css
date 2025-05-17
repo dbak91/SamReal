@@ -19,11 +19,11 @@
   box-sizing: border-box;
 }
 
-.northern{
-	margin:var(--main-margin);
-	max-width:60%;
-	border-radius:20px;
-	padding:var(--main-padding);
+.northern {
+  margin: var(--main-margin);
+  max-width: 60%;
+  border-radius: 20px;
+  padding: var(--main-padding);
 }
 
 header {
@@ -59,7 +59,7 @@ body {
   */
   background-color: black;
   padding: var(--menu-padding);
-z-index:10;
+  z-index: 10;
   align-items: center;
 
   display: flex;
@@ -362,12 +362,11 @@ select {
   min-width: 90%;
   max-width: 30%;
   border-radius: calc(var(--main-radius) - 4px);
-
 }
 
 label {
-	  padding:5px 2px 5px 2px;
-	 
+  padding: 5px 2px 5px 2px;
+
   max-width: 40vw;
   border-radius: calc(var(--main-radius) - 4px);
 }
@@ -401,7 +400,7 @@ label {
     min-width: auto;
     width: 25vw;
   }
-  
+
   /* exclude a type in future keep full width on all sizes*/
   .scheme1,
   .scheme2,
@@ -411,7 +410,7 @@ label {
     max-width: 40vw !important;
   }
 }
- /* scale header down sensibly*/
+/* scale header down sensibly*/
 @media (min-width: 321px) {
   header {
     max-width: 62vw; /* new width for larger width */
@@ -423,6 +422,6 @@ label {
   }
 }
 
-.audio{
-	max-width:75vw;
+.audio {
+  max-width: 75vw;
 }

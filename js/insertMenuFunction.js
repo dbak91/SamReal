@@ -30,5 +30,5 @@
 							extraMenu.style.display = "none";
 						}
 						
-					});
-				};
+					});//add event
+				};// addMoreFunction
