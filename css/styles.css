@@ -422,3 +422,7 @@ label {
     max-width: 40vw; /* new width for larger width */
   }
 }
+
+.audio{
+	max-width:75vw;
+}
