@@ -370,12 +370,14 @@ select {
   border-radius: calc(var(--main-radius) - 4px);
 }
 
-label {
+.label {
   padding: 5px 2px 5px 2px;
 
   max-width: 40vw;
   border-radius: calc(var(--main-radius) - 4px);
 }
+
+/* allow form row to stack its items on sensible width*/
 @media (max-width: 600px) {
   .formGrid div {
     grid-template-columns: 1fr;
@@ -387,7 +389,7 @@ label {
     justify-self: start;
   }
 }
-
+/* widescreen display, could change to aspect ratio 16/9 */
 @media (min-width: 1200px) {
   .about,
   .sam-description,
@@ -417,7 +419,7 @@ label {
     max-width: 40vw !important;
   }
 }
-/* scale header down sensibly*/
+/* scale header background down sensibly*/
 @media (min-width: 321px) {
   header {
     max-width: 62vw; /* new width for larger width */

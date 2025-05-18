@@ -24,10 +24,11 @@
 						
 						const extraMenu = document.getElementById("extraMenuBar");
 						
-						if(extraMenu.style.display == null ||extraMenu.style.display =="none"){
+						if(extraMenu.style.display == null ||extraMenu.style.display =="none")
+						{
 							extraMenu.style.display = "flex";
 						}
-						else //reset
+						else //reset on reclick
 						{
 							extraMenu.style.display = "none";
 						}
