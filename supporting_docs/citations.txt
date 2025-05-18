@@ -2,6 +2,8 @@
 Email regex: https://salesforce.stackexchange.com/questions/230009/regex-for-email-validation
 Band text  : https://soulbrotherssyndicate.co.uk/our-story/
 Map image  : https://commons.m.wikimedia.org/wiki/File:North_Staffordshire_UK_locator_map.svg
+Favicon img: https://favicon.io/favicon-converter/#google_vignette
+Fav. code  : https://www.w3schools.com/HTML/html_favicon.asp
 ------------
 Html validation: https://validator.w3.org/nu/
 Training tools : Google results, stackoverflow, w3shools
