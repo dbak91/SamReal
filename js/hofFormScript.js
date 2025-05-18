@@ -13,33 +13,50 @@ document.addEventListener("DOMContentLoaded", function()
 	const imgOutput = document.querySelector(".errorPanel img");
 	
 
+	function getBandByYear(year) {
+	        const url = `https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=${encodeURIComponent(year)}`;
+
+	        fetch(url)
+	            .then(response => 
+				{
+	             
+					if (!response.ok)
+					{
+	                    throw new Error(`HTTP error ${response.status}`);
+	                }
+	                return response.json();
+	            })
+	            .then(data =>
+				{
+					// empty repsonse
+	                if (!data.data || data.data.length === 0) 
+					{
+	                    throw new Error("No band found for the year: " + year);
+	                }
+
+	                const band = data.data[0].band.name;
+	                const imgUrl = data.data[0].image.source;
+
+	                displayOutput.innerHTML = `Year: ${data.year} | Band: ${band}`;
+	               
+					displayOutput.style.color = "white";
+					
+	                imgOutput.src = imgUrl;
+					
+	            })
+	            .catch(error => 
+				{
+	                displayOutput.textContent = "Error: " + error.message;
+	                displayOutput.style.color = "red";
+	            });
+	    }
 	
 	/**
 	 * initial 2021 sever query */	
-	const url = `https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=2021`;
+	//const url = `https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=2021`;
+	
+	getBandByYear(2021); //initial search
 		
-			fetch(url)
-			           .then(response => {
-			               if (!response.ok) {
-			                   throw new Error(`HTTP error ${response.status}`);
-			               }
-			               return response.json();
-			           })
-			           .then(data => {
-						
-						
-							const imgUrl= data.data[0].image.source;
-							
-							displayOutput.textContent = "Year: " + data.year +  "| Band: " +data.data[0].band.name;//+ JSON.stringify(data, null, 2); //dev testing line, to see output
-			               	displayOutput.style.color = "white";
-							
-							imgOutput.src = imgUrl;
-							
-			           })
-			           .catch(error => {
-			               displayOutput.textContent = "Error: " + error.message;
-			               displayOutput.style.color = "red";
-			           });
 	
 	/**
 	 * ADD SUBMIT ACTION LISTENER
@@ -59,50 +76,12 @@ document.addEventListener("DOMContentLoaded", function()
 		    return;
 		}
 		
-		if (yearInput.value > 2025) 
-			    {
-					displayOutput.style.color = "red";
-				    displayOutput.textContent = "Year not happened yet";
-				    return;
-				}
-		
-				if (yearInput.value < 1900) 
-							    {
-									displayOutput.style.color = "red";
-								    displayOutput.textContent = "Too far back (1900 min)";
-								    return;
-								}
-								
+		// REMOVED year validation due to now beuing a select, was input. 
+						
 		displayOutput.style.color = "white";
 		
 		
-		const url = `https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=${encodeURIComponent(yearInput.value.trim())}`;
-	
-		fetch(url)
-		           .then(response => {
-		               if (!response.ok) {
-		                   throw new Error(`HTTP error ${response.status}`);
-		               }
-		               return response.json();
-		           })
-		           .then(data => {
-					
-					
-						const imgUrl= data.data[0].image.source;
-						//const br = document.createElement("br");
-						
-						displayOutput.innerHTML= "Year: " + data.year + "| Band: " +data.data[0].band.name;//+ JSON.stringify(data, null, 2); //dev testing line, to see output
-		               	displayOutput.style.color = "white";
-						
-						imgOutput.src = imgUrl;
-						
-		           })
-		           .catch(error => {
-		               displayOutput.textContent = "Error: " + error.message;
-		               displayOutput.style.color = "red";
-		           
-				   });/** fetch */
-
+		getBandByYear(yearInput.value);
    	});/* submit action listener */
 
    

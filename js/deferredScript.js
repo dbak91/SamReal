@@ -2,23 +2,18 @@
 	
 	*/
 
+function applyAdjustments(){
 	
+	document.addEventListener('DOMContentLoaded',function()
+	{  
+		const script1 = document.createElement('script');
+		script1.src = `js/insertMenuFunction.js?v=${new Date().getTime()}`; //generrate unique timestamp name as v stop caching so sharted widths readjust
+		document.body.appendChild(script1);
+	});
 
-	function applyAdjustments(){
-		
-		document.addEventListener('DOMContentLoaded',function() { //define here 
-		
-			
-			const script1 = document.createElement('script');
-			script1.src = `js/insertMenuFunction.js?v=${new Date().getTime()}`; //generrate unique timestamp name as v stop caching so sharted widths readjust
-			document.body.appendChild(script1);
-			});
+}
 
-	}
+window.addEventListener('load', applyAdjustments);
 	
-	window.addEventListener('load', 
-		    applyAdjustments  
-		);
-		
-	applyAdjustments();
+applyAdjustments();
 		

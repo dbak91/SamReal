@@ -52,9 +52,11 @@ document.addEventListener("DOMContentLoaded", function()
 			 * no response or message checking makes a lot of assumptions, saving for hall fo fame extension
 			 */
 		fetch("https://mudfoot.doc.stu.mmu.ac.uk/ash/api/mailinglist", {
-		      method: "POST",
+		      
+			  method: "POST",
 		     
-			  headers: {
+			  headers: 
+			  {
 		        "Content-Type": "application/json"
 		      },
 		     
@@ -62,9 +64,11 @@ document.addEventListener("DOMContentLoaded", function()
 		    })
 		    .then(response => response.json()) 
 			
-		    .then(result => {
+		    .then(result => 
+			{
 				// basic none null check
-		      if (result.message) {
+		      if (result.message)
+			  {
 		        
 		        errorOutput.style.color = "white";
 		        errorOutput.textContent = "Success, signed up.  || Server Message(may be empty):" +  (result.messsage ||  "");
@@ -72,18 +76,17 @@ document.addEventListener("DOMContentLoaded", function()
 		        // reset
 		        nameInput.value = "";
 		        emailInput.value = "";
-		      } else {
-				
-		        
+		      } else 
+			  {  
 		        errorOutput.style.color = "red";
 		        errorOutput.textContent = result.error || "An unkown error was returned(result.error null)"; /* could be null */
 		      }
 		    })
 		    .catch(error => {
-		      errorOutput.textContent = "Error connecting to server:" + error.message;
+		      
+				errorOutput.textContent = "Error connecting to server:" + error.message;
 		    });/* fetch mudfoot*/		
 
    	});/* submit action list */
 
-   
 });/* on load */
