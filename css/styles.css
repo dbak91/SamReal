@@ -86,7 +86,7 @@ body {
   align-items: center;
   font-size: 20px;
   position: sticky;
-  top: 59px;
+  /*top: 59px;*/
 }
 
 .menuBar a {
@@ -199,33 +199,39 @@ small {
 .scheme2,
 .scheme3,
 .scheme4,
-.scheme5 {
+.scheme5,
+.scheme6  {
   border-radius: var(--main-radius);
   padding: calc(var(--main-padding) + 10px);
   margin: var(--main-margin);
 }
 
 .scheme1 {
-  background-color: #037171;
-  color: white;
+  background-color: #037171 !important;
+  color: white !important;
   opacity: 85%;
 }
 .scheme2 {
-  background-color: var(--carrib);
-  color: white;
+  background-color: var(--carrib) !important;
+  color: white !important;
 }
 .scheme3 {
-  background-color: var(--brown);
+  background-color: var(--brown) !important;
   color: black;
 }
 
 .scheme4 {
-  background-color: var(--rose);
-  color: white;
+  background-color: var(--rose) !important;
+  color: white !important;
 }
 
 .scheme5 {
-  background-color: var(--celadon);
+  background-color: var(--celadon) !important;
+  color: black;
+}
+
+.scheme6 {
+  background-color: var(--blue) !important;
   color: black;
 }
 .band-txt {
@@ -382,7 +388,7 @@ label {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .about,
   .sam-description,
   .product-box {
@@ -406,7 +412,8 @@ label {
   .scheme2,
   .scheme3,
   .scheme4,
-  .scheme5 {
+  .scheme5, 
+  .scheme6 {
     max-width: 40vw !important;
   }
 }
