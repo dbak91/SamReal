@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function()
 	                    throw new Error("No band found for the year: " + year);
 	                }
 
-					console.log("func: url"+url+" data"+data.year+" "+data.band);
+					//console.log("func: url"+url+" data"+data.year+" "+data[0].band.name);
 	                const band = data.data[0].band.name;
 	                const imgUrl = data.data[0].image.source;
 
