@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<title>HoF Checker</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/deferredScript.js" defer></script>
+<script src="js/hofFormScript.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header style="max-width:80vw !important"><h1 class="scheme1">Hall of fame</h1>
+    </header>
+    
+    <main class="signup">
+        <div class="bg-placeholder"></div>
+      
+       <form class="formGrid scheme1">
+        
+        <div class="nameRow">
+            <label class="label" for="year">Enter year to search</label>
+            <select id="year" name="year"></select>
+        
+        </div>
+            <div class="buttonRow">
+                <label ></label>
+                <button class="submitBtn" type="button">Check Year</button>
+            </div>
+        </form>
+        
+        <section class="errorPanel scheme3" >
+            <h4>Server Results:</h4>
+            <div class="label" style="color:white;background-color:black;">Display or Errors will display here
+            </div>
+            
+            <img src="tobeinserted" style="border-radius:var(--main-radius);min-height:70px;" alt="The returned picture of the band found for that year goes here">
+        
+        </section>
+    </main>
+    
+    <!-- Script for populating year dropdown, no point having own file -->
+    <script>
+    	const select = document.getElementById("year");
+    	
+    	<!--- hof started 1985, first entry 1986 (chuck berry)-->
+    	for ( let y = 2024;y> 1985;y--){
+    		
+    		const optionToAdd = document.createElement("option");
+    		const defaultYear = 2021;
+    		optionToAdd.value = y;
+    		optionToAdd.textContent = y; // needed for Form interraction and display
+    		
+    		
+    		if (y === defaultYear) {
+    		      optionToAdd.selected = true;
+    		    }
+    		select.appendChild(optionToAdd);
+    	}
+    </script>
+</body>
+</html>

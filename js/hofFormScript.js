@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function()
 	
 
 	function getBandByYear(year) {
-	        const url = `https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=${encodeURIComponent(year)}`;
+	        const url = 'https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=${encodeURIComponent(year)}';
 
 	        fetch(url)
 	            .then(response => 
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function()
 	
 	/**
 	 * initial 2021 sever query */	
-	//const url = `https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=2021`;
+	//const url = 'https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=2021';
 	
 	getBandByYear(2021); //initial search
 		

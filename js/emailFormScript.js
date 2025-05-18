@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function()
 			/**
 			 * no response or message checking makes a lot of assumptions, saving for hall fo fame extension
 			 */
-		fetch("https://mudfoot.doc.stu.mmu.ac.uk/ash/api/mailinglist", {
+		fetch("https://mudfoot.doc.stu.mmu.ac.uk/ash/api/mailinglist",
+		     {
 		      
 			  method: "POST",
 		     

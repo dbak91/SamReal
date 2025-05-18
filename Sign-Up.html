@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign Up Now</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/deferredScript.js" defer></script>
+    <script src="js/emailFormScript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- To be inserted by js , conmtains band logo and 3 main nav links-->
+    <!-- js will insert to "innerHtml" so use header here and nav or basic in the html thats inserted-->
+    
+    <header style="max-width:80vw !important">
+      <h1 class="scheme1">Sign up!</h1>
+    </header>
+    
+    <main class="signup">
+    
+      <div class="bg-placeholder"></div>
+    
+      <section class="data-use-list scheme1">
+        <h4>What you will receive:</h4>
+        <ul>
+          <li>Tour updates</li>
+          <li>Product and offers</li>
+          <li>News letters (1 per month)</li>
+        </ul>
+      </section>
+    
+      <form class="formGrid scheme3">
+        <div class="nameRow">
+          <label class="label" for="username">Enter your Name</label>
+          <input type="text" id="username">
+        </div>
+     
+        <div class="emailRow">
+          <label class="label" for="email">Enter your Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+     
+        <div class="buttonRow">
+          <label></label>
+          <button class="submitBtn" type="button">Sign up!</button>
+        </div>
+        
+      </form>
+    
+      <section class="errorPanel scheme1">
+       
+        <h5>Server Results:</h5>
+        <div class="label" style="color:red;background-color:black;">Errors will display here </div>
+      
+      </section>
+      
+    </main>
+  </body>
+</html>
