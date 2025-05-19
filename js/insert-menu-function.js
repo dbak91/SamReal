@@ -13,7 +13,14 @@ fetch("Common-Menu.html")
 			
 	    })
 	    .catch(error => console.error("Error loading the Common-Menu.html:", error) );
-		
+fetch("Common-Footer.html")
+	.then(response => response.text())
+	.then(data => 
+	{
+		document.body.insertAdjacentHTML('beforeend', data);
+	})
+	.catch(error => console.error("Error inserting footer:",error) );
+			
 function addMoreFunction()
 {
 					

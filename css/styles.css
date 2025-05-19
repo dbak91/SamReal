@@ -469,6 +469,12 @@ img.right {
 	max-width:100%;
 	border-radius:var(--main-radius);
 }
+.footer{
+	color:grey;
+}
+#priv{
+	font-size:10px;
+}
 /* scale header background down sensibly*/
 @media (min-width: 321px) {
   header {
