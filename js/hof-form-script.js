@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function()
 	                const band = data.data[0].band.name;
 	                const imgUrl = data.data[0].image.source;
 
-	                displayOutput.innerHTML = `Year: ${data.year} | Band: ${band}`;
+	                displayOutput.innerHTML = `Year: ${data.year} <br> Band: ${band}`;
 	               
 					displayOutput.style.color = "white";
 					

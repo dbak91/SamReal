@@ -140,6 +140,10 @@ body {
 #moreLink:hover + .menuBar {
   display: block;
 }
+
+.MenuList a{
+	text-align:center;
+}
 /*-------------------------------*/
 /*-- home and main------------ --*/
 /*-------------------------------*/
@@ -399,6 +403,7 @@ select {
     justify-self: start;
   }
 }
+
 /* widescreen display, could change to aspect ratio 16/9 */
 @media (min-width: 1200px) {
   .about,
