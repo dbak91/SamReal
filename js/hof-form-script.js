@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function()
 	
 	/**
 	 * initial 2021 sever query */	
-	//const url = 'https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=2021';
+	//const url = `https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=2021`;
 	
 	getBandByYear(2021); //initial search
 		
