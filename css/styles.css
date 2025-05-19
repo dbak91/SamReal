@@ -76,7 +76,7 @@ body {
 
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
 
   font-size: var(--menu-font-size);
@@ -97,7 +97,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
-  position: sticky;
+  position: fixed;
   /*top: 59px;*/
 }
 
