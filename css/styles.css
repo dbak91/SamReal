@@ -314,12 +314,12 @@ h3.sam-brief {
   background-color: var(--rose);
 }
 .sam-big-name {
-  padding: var(--main-padding);
-  margin: var(--main-margin);
+  padding:  var(--main-padding) ;
+  margin: 80px 0 0 0;
   color: white;
   font-size: 5vh;
   
-  max-width: 100%;
+  max-width: 95%;
   text-align:center;
   background-color: var(--carrib);
   border-radius: var(--main-radius);
@@ -403,7 +403,9 @@ select {
 @media (min-width: 1200px) {
   .about,
   .sam-description,
-  .product-box {
+  .product-box, 
+  .sam-big-name
+  {
     max-width: 65% !important;
   }
 
