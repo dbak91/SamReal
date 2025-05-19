@@ -19,31 +19,13 @@
   box-sizing: border-box;
 }
 
-.northern {
-  margin: var(--main-margin);
-  max-width: 60%;
-  border-radius: 20px;
-  padding: var(--main-padding);
+
+.audio {
+  max-width: 75vw;
 }
 
 header {
   width: 80vw;
-}
-.img-box {
-  position: relative;
-  text-align: center;
-  color: grey;
-}
-.label {
-  color: white;
-  background-color: black;
-}
-
-.center-bottom {
-  position: absolute;
-  bottom: 8px;
-  text-align: center;
-  font-size: 12px;
 }
 
 body {
@@ -51,6 +33,75 @@ body {
   margin: var(--body-margin-full);
 }
 
+main {
+  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 10px) 0px 0px
+    0px;
+  min-height: 3000px !important; /* allows for proper scroll-to buttons on portrait. */
+  max-width: 65%;
+}
+main.sam,
+main.about,
+main.signup {
+  max-width: 100%; /* reset, defaults for main set to 65%*/
+  width: calc(100% - 2 * var(--body-margin) - (var(--main-padding)));
+}
+main h1 {
+  font-size: 20vh;
+}
+small {
+  vertical-align: baseline;
+}
+
+
+.footer{
+	color:grey;
+}
+.home-header-band {
+  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 5vh) 0px 0px 0px;
+}
+
+
+.home-header-band h1 {
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0vh;
+}
+
+.home-header-band h1 span {
+  align-self: flex-start;
+}
+
+.band-txt {
+  color: white;
+  font-size: 6vh;
+  background-color: black;
+  padding: calc(var(--main-padding));
+
+  margin: 0.25vh;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.band-txt.sam,
+.band-txt.tag {
+  font-size: 2.5vh;
+}
+.band-txt.tag {
+  font-size: 2vh;
+}
+
+.band-description {
+  margin: var(--main-margin);
+}
+/*----------------------------*/
+/*---------Nav Menu-----------*/
+/*---------------------------*/
+#githubBtn
+{
+	color:grey !important;
+}
 .menuBar {
   opacity: 0.9;
   /* Wireframe is to have band name (first div/<a>) on the left, then all site links to the right [r1] 
@@ -91,7 +142,7 @@ body {
 
 .menuBar a {
   text-decoration: none;
-  color: white; /* all links to grey, band will override to its own color even though its an a */
+  color: white; 
   font-size: var(--menu-font-size);
 }
 
@@ -128,58 +179,42 @@ body {
   display: block;
 }
 
-.home-header-band {
-  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 5vh) 0px 0px 0px;
+#homeLogo{
+	max-height:75vh;
+	border-radius:var(--main-radius);
 }
-
-.home-header-band h1 {
-  padding: 0px 0px 0px 0px;
-  margin: 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 0vh;
+/*----------------------------*/
+/*---------About----------------*/
+/*---------------------------*/
+.northern {
+  margin: var(--main-margin);
+  max-width: 60%;
+  border-radius: 20px;
+  padding: var(--main-padding);
 }
-main {
-  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 10px) 0px 0px
-    0px;
-  min-height: 3000px !important; /* allows for proper scroll-to buttons on portrait. 
-  max-width: 65%;
-}
-
-.home-header-band h1 span {
-  align-self: flex-start;
-}
-
-
-.sam-description {
-  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 70px) 0px 0px
-    0px;
+/*----------------------------*/
+/*---------Sam----------------*/
+/*---------------------------*/
+.img-box {
+  position: relative;
   text-align: center;
+  color: grey;
 }
-
-main.sam,
-main.about,
-main.signup {
-  max-width: 100%; /* reset, defaults for main set to 65%*/
-  width: calc(100% - 2 * var(--body-margin) - (var(--main-padding)));
-}
-main h1 {
-  font-size: 20vh;
-}
-.head-box {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 5px;
-  align-items: center;
-  justify-content: flext-start;
+.center-bottom {
+  position: absolute;
+  bottom: 8px;
+  text-align: center;
+  font-size: 12px;
 }
 
 .left {
   flex: 1;
 }
-small {
-  vertical-align: baseline;
+
+.sam-description {
+  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 70px) 0px 0px
+    0px;
+  text-align: center;
 }
 .left h3 {
   display: flex;
@@ -190,71 +225,6 @@ small {
 }
 .right {
   flex: 1;
-}
-/*-------------------------------*/
-/*-- common margins and pdding --*/
-/*-------------------------------*/
-.scheme1,
-.band-txt,
-.scheme2,
-.scheme3,
-.scheme4,
-.scheme5,
-.scheme6  {
-  border-radius: var(--main-radius);
-  padding: calc(var(--main-padding) + 10px);
-  margin: var(--main-margin);
-}
-
-.scheme1 {
-  background-color: #037171 !important;
-  color: white !important;
-  opacity: 85%;
-}
-.scheme2 {
-  background-color: var(--carrib) !important;
-  color: white !important;
-}
-.scheme3 {
-  background-color: var(--brown) !important;
-  color: black;
-}
-
-.scheme4 {
-  background-color: var(--rose) !important;
-  color: white !important;
-}
-
-.scheme5 {
-  background-color: var(--celadon) !important;
-  color: black;
-}
-
-.scheme6 {
-  background-color: var(--blue) !important;
-  color: black;
-}
-.band-txt {
-  color: white;
-  font-size: 6vh;
-  background-color: black;
-  padding: calc(var(--main-padding));
-
-  margin: 0.25vh;
-  white-space: nowrap;
-  vertical-align: baseline;
-}
-
-.band-txt.sam,
-.band-txt.tag {
-  font-size: 2.5vh;
-}
-.band-txt.tag {
-  font-size: 2vh;
-}
-
-.band-description {
-  margin: var(--main-margin);
 }
 
 .sam-big-name {
@@ -301,11 +271,6 @@ a.product {
   border-radius: 15px;
 }
 
-/* copmpensate for injected menu bar on scroll*/
-[id] {
-  scroll-margin-top: 60px;
-}
-/**/
 
 .sam-header {
   padding: var(--main-padding);
@@ -325,27 +290,58 @@ h3.sam-brief {
   color: white;
   background-color: var(--rose);
 }
-.bg-placeholder {
-  max-width: calc(100%-var(--main-padding) - 2 * var(--body-margin));
-  /*needed to maintain crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
-  width: calc(100% - 2 * var(--body-margin) - (var(--main-padding)));
-  display: block;
 
-  /* height: 110vh; */
-
-  background-image: url("../img/main-banner.jpg");
-
-  background-position: 78% 25%;
-  /* IF PAGE GOES BEYOND SIZE OF IMAGE REPEAT IT */
-  background-size: cover;
-  position: fixed;
-  z-index: -1;
-  min-height: 120vh;
-  height: 120%;
-  top: calc(var(--body-margin));
-
-  border-radius: var(--main-radius);
+.left{
+	 background-color:var(--brown);
+	 border-radius:var(--main-radius);
 }
+
+img.right {
+	max-width:34%;
+	border:solid grey 3px;
+	border-radius:var(--main-radius);
+}
+.img-box{
+	padding:0px;
+	background-color:white;
+}
+.center-bottom{
+	color:grey !important;
+	background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+#samMap{
+	margin:0px;
+	padding:0px;
+	border: solid black 4px;
+	max-width:100%;
+	border-radius:var(--main-radius);
+}
+/*----------------------------*/
+/*---------Signup/hof---------*/
+/*----------------------------*/
+
+.label {
+  color: white;
+  background-color: black;
+}
+
+
+
+#hofImg{
+	style="border-radius:var(--main-radius);
+	min-height:70px;
+}
+#serverResults{
+	color:white;
+	background-color:black;
+}
+#hofHeader{
+	max-width:60vw !important;
+}
+
+
+
 .formGrid {
   display: grid;
   gap: 1rem;
@@ -377,6 +373,90 @@ select {
   border-radius: calc(var(--main-radius) - 4px);
 }
 
+
+#emailError{
+	color:red;
+	background-color:black;"
+}
+
+#priv{
+	font-size:10px;
+}
+/*-------------------------------*/
+/*-- common margins and pdding --*/
+/*-------------------------------*/
+.scheme1,
+.band-txt,
+.scheme2,
+.scheme3,
+.scheme4,
+.scheme5,
+.scheme6  {
+  border-radius: var(--main-radius);
+  padding: calc(var(--main-padding) + 10px);
+  margin: var(--main-margin);
+}
+
+.scheme1 {
+  background-color: #037171 !important;
+  color: white !important;
+  opacity: 85%;
+}
+.scheme2 {
+  background-color: var(--carrib) !important;
+  color: white !important;
+}
+.scheme3 {
+  background-color: var(--brown) !important;
+  color: black;
+}
+
+.scheme4 {
+  background-color: var(--rose) !important;
+  color: white !important;
+}
+
+.scheme5 {
+  background-color: var(--celadon) !important;
+  color: black;
+}
+
+.scheme6 {
+  background-color: var(--blue) !important;
+  color: black;
+}
+
+/* copmpensate for injected menu bar on scroll*/
+[id] {
+  scroll-margin-top: 60px;
+}
+/**/
+
+.bg-placeholder {
+  max-width: calc(100%-var(--main-padding) - 2 * var(--body-margin));
+  /*needed to maintain crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
+  width: calc(100% - 2 * var(--body-margin) - (var(--main-padding)));
+  display: block;
+
+  /* height: 110vh; */
+
+  background-image: url("../img/main-banner.jpg");
+
+  background-position: 78% 25%;
+  /* IF PAGE GOES BEYOND SIZE OF IMAGE REPEAT IT */
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+  min-height: 120vh;
+  height: 120%;
+  top: calc(var(--body-margin));
+
+  border-radius: var(--main-radius);
+}
+
+/*----------------------------*/
+/*---------Responsiveness-----*/
+/*----------------------------*/
 /* allow form row to stack its items on sensible width*/
 @media (max-width: 600px) {
   .formGrid div {
@@ -409,10 +489,7 @@ select {
     width: 25vw;
   }
 
-#githubBtn
-{
-	color:grey !important;
-}
+
   /* exclude a type in future keep full width on all sizes*/
   .scheme1,
   .scheme2,
@@ -423,58 +500,7 @@ select {
     max-width: 40vw !important;
   }
 }
-#homeLogo{
-	max-height:75vh;
-	border-radius:var(--main-radius);
-}
 
-#hofImg{
-	style="border-radius:var(--main-radius);
-	min-height:70px;
-}
-#serverResults{
-	color:white;
-	background-color:black;
-}
-#hofHeader{
-	max-width:60vw !important;
-}
-
-.left{
-	 background-color:var(--brown);
-	 border-radius:var(--main-radius);
-}
-
-img.right {
-	max-width:34%;
-	border:solid grey 3px;
-	border-radius:var(--main-radius);
-}
-.img-box{
-	padding:0px;
-	background-color:white;
-}
-.center-bottom{
-	color:grey !important;
-	background-color: rgba(0, 0, 0, 0.8) !important;
-}
-#emailError{
-	color:red;
-	background-color:black;"
-}
-#samMap{
-	margin:0px;
-	padding:0px;
-	border: solid black 4px;
-	max-width:100%;
-	border-radius:var(--main-radius);
-}
-.footer{
-	color:grey;
-}
-#priv{
-	font-size:10px;
-}
 /* scale header background down sensibly*/
 @media (min-width: 321px) {
   header {
@@ -487,6 +513,3 @@ img.right {
   }
 }
 
-.audio {
-  max-width: 75vw;
-}
