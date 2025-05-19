@@ -38,6 +38,7 @@
 
 header {
   width: 80vw;
+  padding:50px 0 0 0;
 }
 .img-box {
   position: relative;
@@ -259,22 +260,7 @@ small {
 /*------------------------*/
 /*---------sam----*/
 /*------------------------*/
-.sam-big-name {
-  padding: var(--main-padding);
-  margin: var(--main-margin);
-  color: white;
-  font-size: 5vh;
-  background-color: black;
-  padding: calc(var(--main-padding));
 
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--carrib);
-  color: white;
-  border-radius: var(--main-radius);
-}
 
 .product-box {
   display: flex;
@@ -326,6 +312,18 @@ h3.sam-brief {
 .sam-brief.book-now {
   color: white;
   background-color: var(--rose);
+}
+.sam-big-name {
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+  color: white;
+  font-size: 5vh;
+  
+  max-width: 100%;
+  text-align:center;
+  background-color: var(--carrib);
+  border-radius: var(--main-radius);
+
 }
 .bg-placeholder {
   max-width: calc(100%-var(--main-padding) - 2 * var(--body-margin));
