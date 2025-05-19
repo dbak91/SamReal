@@ -319,7 +319,7 @@ h3.sam-brief {
 }
 .sam-big-name {
   padding:  var(--main-padding) ;
-  margin: 80px 0 0 0;
+  margin: 80px 0 0 var(--main-margin);
   color: white;
   font-size: 5vh;
   
