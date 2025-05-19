@@ -15,6 +15,12 @@
   --celadon: #a4d4b4;
   --blue: #d6eeff;
 }
+
+/*------------------*/
+/*-------general----*/
+/*------------------*/
+
+
 * {
   box-sizing: border-box;
 }
@@ -27,17 +33,35 @@
 header {
   width: 80vw;
 }
+.img-box {
+  position: relative;
+  text-align: center;
+  color: grey;
+}
+.label {
+  color: white;
+  background-color: black;
+}
+
+.center-bottom {
+  position: absolute;
+  bottom: 8px;
+  text-align: center;
+  font-size: 12px;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
   margin: var(--body-margin-full);
 }
 
+small {
+  vertical-align: baseline;
+}
 main {
   padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 10px) 0px 0px
     0px;
   min-height: 3000px !important; /* allows for proper scroll-to buttons on portrait. */
-  max-width: 65%;
 }
 main.sam,
 main.about,
@@ -48,18 +72,17 @@ main.signup {
 main h1 {
   font-size: 20vh;
 }
-small {
-  vertical-align: baseline;
-}
-
 
 .footer{
 	color:grey;
 }
+
+/*--------------*/
+/*-------Home----*/
+/*---------------*/
 .home-header-band {
   padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 5vh) 0px 0px 0px;
 }
-
 
 .home-header-band h1 {
   padding: 0px 0px 0px 0px;
@@ -68,11 +91,6 @@ small {
   flex-direction: column;
   gap: 0vh;
 }
-
-.home-header-band h1 span {
-  align-self: flex-start;
-}
-
 .band-txt {
   color: white;
   font-size: 6vh;
@@ -95,13 +113,16 @@ small {
 .band-description {
   margin: var(--main-margin);
 }
-/*----------------------------*/
-/*---------Nav Menu-----------*/
-/*---------------------------*/
-#githubBtn
-{
-	color:grey !important;
+
+
+#homeLogo{
+	max-height:75vh;
+	border-radius:var(--main-radius);
 }
+
+/*------------------------*/
+/*-----------Nav----------*/
+/*-------------------------*/
 .menuBar {
   opacity: 0.9;
   /* Wireframe is to have band name (first div/<a>) on the left, then all site links to the right [r1] 
@@ -142,7 +163,7 @@ small {
 
 .menuBar a {
   text-decoration: none;
-  color: white; 
+  color: white; /* all links to grey, band will override to its own color even though its an a */
   font-size: var(--menu-font-size);
 }
 
@@ -179,42 +200,95 @@ small {
   display: block;
 }
 
-#homeLogo{
-	max-height:75vh;
-	border-radius:var(--main-radius);
+
+#githubBtn
+{
+	color:grey !important;
 }
-/*----------------------------*/
-/*---------About----------------*/
-/*---------------------------*/
+/*------------------------*/
+/*-----------About----------*/
+/*-------------------------*/
+
 .northern {
   margin: var(--main-margin);
   max-width: 60%;
   border-radius: 20px;
   padding: var(--main-padding);
 }
-/*----------------------------*/
-/*---------Sam----------------*/
-/*---------------------------*/
-.img-box {
-  position: relative;
-  text-align: center;
-  color: grey;
+
+/*------------------------*/
+/*-----------Hof/Signup----------*/
+/*-------------------------*/
+
+.formGrid {
+  display: grid;
+  gap: 1rem;
+  max-width: 100%; /* Prevent horizontal overflow */
 }
-.center-bottom {
-  position: absolute;
-  bottom: 8px;
-  text-align: center;
-  font-size: 12px;
+
+.formGrid div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr);
+}
+
+.emailRow {
+  grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr) auto;
+}
+
+input,
+button.submitBtn,
+select {
+  min-width: 90%;
+  max-width: 30%;
+  border-radius: calc(var(--main-radius) - 4px);
+}
+
+.label {
+  padding: 5px 2px 5px 2px;
+
+  max-width: 40vw;
+  border-radius: calc(var(--main-radius) - 4px);
+}
+
+
+#hofImg{
+	style="border-radius:var(--main-radius);
+	min-height:70px;
+}
+
+
+#serverResults{
+	color:white;
+	background-color:black;
+}
+#hofHeader{
+	max-width:60vw !important;
+}
+
+#emailError{
+	color:red;
+	background-color:black;"
+}
+
+
+#priv{
+	font-size:10px;
+}
+/*------------------------*/
+/*----------Sam----------*/
+/*-------------------------*/
+.head-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 5px;
+  align-items: center;
+  justify-content: flext-start;
 }
 
 .left {
   flex: 1;
-}
-
-.sam-description {
-  padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 70px) 0px 0px
-    0px;
-  text-align: center;
 }
 .left h3 {
   display: flex;
@@ -226,6 +300,7 @@ small {
 .right {
   flex: 1;
 }
+
 
 .sam-big-name {
   padding: var(--main-padding);
@@ -271,6 +346,11 @@ a.product {
   border-radius: 15px;
 }
 
+/* copmpensate for injected menu bar on scroll*/
+[id] {
+  scroll-margin-top: 60px;
+}
+/**/
 
 .sam-header {
   padding: var(--main-padding);
@@ -309,78 +389,12 @@ img.right {
 	color:grey !important;
 	background-color: rgba(0, 0, 0, 0.8) !important;
 }
-
 #samMap{
 	margin:0px;
 	padding:0px;
 	border: solid black 4px;
 	max-width:100%;
 	border-radius:var(--main-radius);
-}
-/*----------------------------*/
-/*---------Signup/hof---------*/
-/*----------------------------*/
-
-.label {
-  color: white;
-  background-color: black;
-}
-
-
-
-#hofImg{
-	style="border-radius:var(--main-radius);
-	min-height:70px;
-}
-#serverResults{
-	color:white;
-	background-color:black;
-}
-#hofHeader{
-	max-width:60vw !important;
-}
-
-
-
-.formGrid {
-  display: grid;
-  gap: 1rem;
-  max-width: 100%; /* Prevent horizontal overflow */
-}
-
-.formGrid div {
-  display: grid;
-  align-items: center;
-  grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr);
-}
-
-.emailRow {
-  grid-template-columns: minmax(150px, max-content) minmax(200px, 1fr) auto;
-}
-
-input,
-button.submitBtn,
-select {
-  min-width: 90%;
-  max-width: 30%;
-  border-radius: calc(var(--main-radius) - 4px);
-}
-
-.label {
-  padding: 5px 2px 5px 2px;
-
-  max-width: 40vw;
-  border-radius: calc(var(--main-radius) - 4px);
-}
-
-
-#emailError{
-	color:red;
-	background-color:black;"
-}
-
-#priv{
-	font-size:10px;
 }
 /*-------------------------------*/
 /*-- common margins and pdding --*/
@@ -425,13 +439,6 @@ select {
   background-color: var(--blue) !important;
   color: black;
 }
-
-/* copmpensate for injected menu bar on scroll*/
-[id] {
-  scroll-margin-top: 60px;
-}
-/**/
-
 .bg-placeholder {
   max-width: calc(100%-var(--main-padding) - 2 * var(--body-margin));
   /*needed to maintain crop at right hand side leaving the margin/padding set up in body else img overlayRHS margin*/
@@ -453,10 +460,9 @@ select {
 
   border-radius: var(--main-radius);
 }
-
-/*----------------------------*/
-/*---------Responsiveness-----*/
-/*----------------------------*/
+/*------------------------*/
+/*-----------Responseiveness----------*/
+/*-------------------------*/
 /* allow form row to stack its items on sensible width*/
 @media (max-width: 600px) {
   .formGrid div {
@@ -489,7 +495,6 @@ select {
     width: 25vw;
   }
 
-
   /* exclude a type in future keep full width on all sizes*/
   .scheme1,
   .scheme2,
@@ -500,6 +505,7 @@ select {
     max-width: 40vw !important;
   }
 }
+
 
 /* scale header background down sensibly*/
 @media (min-width: 321px) {
