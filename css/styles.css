@@ -60,7 +60,9 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: var(--body-margin-full);
 }
-
+/*-------------------------------*/
+/*-- menu nav----------------- --*/
+/*-------------------------------*/
 .menuBar {
   opacity: 0.9;
   /* Wireframe is to have band name (first div/<a>) on the left, then all site links to the right [r1] 
@@ -137,7 +139,9 @@ body {
 #moreLink:hover + .menuBar {
   display: block;
 }
-
+/*-------------------------------*/
+/*-- home and main------------ --*/
+/*-------------------------------*/
 .home-header-band {
   padding: calc(var(--menu-font-size) + (var(--menu-padding)) + 5vh) 0px 0px 0px;
 }
@@ -158,6 +162,9 @@ main {
 main h1 {
   font-size: 20vh;
 }
+/*----?????-----*/
+/* dare not try and reorder brak everything*/
+
 .head-box {
   display: flex;
   flex-direction: row;
@@ -249,6 +256,9 @@ small {
   margin: var(--main-margin);
 }
 
+/*------------------------*/
+/*---------sam----*/
+/*------------------------*/
 .sam-big-name {
   padding: var(--main-padding);
   margin: var(--main-margin);
@@ -338,12 +348,19 @@ h3.sam-brief {
 
   border-radius: var(--main-radius);
 }
+
+/*------------------------*/
+/*---------hof/sign up----*/
+/*------------------------*/
+
 .formGrid {
   display: grid;
   gap: 1rem;
   max-width: 100%; /* Prevent horizontal overflow */
 }
 
+/* set min and max sizes for a grid layout for email and name row, */
+/* need submut button on hof and check button on email to be in a grid because it doesnt have a label with a size on that row */
 .formGrid div {
   display: grid;
   align-items: center;
@@ -358,17 +375,20 @@ input,
 button.submitBtn,
 select {
   min-width: 90%;
-  max-width: 30%;
+  max-width: 30%; /* seems weird min then max but has desired effect, not full stretch and not too small. */
   border-radius: calc(var(--main-radius) - 4px);
 }
 
 .label {
-  padding: 5px 2px 5px 2px;
-
+  /* padding: 5px 2px 5px 2px;*/
+  padding: 5px 0 5px var(--main-padding);
+  
   max-width: 40vw;
   border-radius: calc(var(--main-radius) - 4px);
 }
-
+/*------------------------*/
+/*---------responsiveness----*/
+/*------------------------*/
 /* allow form row to stack its items on sensible width*/
 @media (max-width: 600px) {
   .formGrid div {
@@ -412,13 +432,28 @@ select {
     max-width: 40vw !important;
   }
 }
+/* scale header background down sensibly*/
+@media (min-width: 321px) {
+  header {
+    max-width: 100vw; 
+  }
+}
+@media (min-width: 600px) {
+  header {
+    max-width: 40vw;
+  }
+}
+
+/*------------------------*/
+/*---------late inline tidy----*/
+/*------------------------*/
 #homeLogo{
 	max-height:75vh;
 	border-radius:var(--main-radius);
 }
 
 #hofImg{
-	style="border-radius:var(--main-radius);
+	border-radius:var(--main-radius);
 	min-height:70px;
 }
 #serverResults{
@@ -463,17 +498,6 @@ img.right {
 }
 #priv{
 	font-size:10px;
-}
-/* scale header background down sensibly*/
-@media (min-width: 321px) {
-  header {
-    max-width: 100vw; 
-  }
-}
-@media (min-width: 600px) {
-  header {
-    max-width: 40vw;
-  }
 }
 
 .audio {
